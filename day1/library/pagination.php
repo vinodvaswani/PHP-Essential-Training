@@ -19,6 +19,7 @@ class pagination
 	var $con="";
 	var $rows_per_page=10;
 	var $page_no_variable="page_no";
+	var $unordered_list_class = "pagination";
 	var $cur_page=1;
 	var $total_rows=0;
 	
@@ -262,7 +263,7 @@ class pagination
 function show_links_google_type($hash_string="")
 	{
 		$cur_page_number=1;
-		echo "<ul class='pagination'>";
+		echo "<ul class='".$this->unordered_list_class."'>";
 		$link="";
 		$querystring_array = $_GET;
 		
